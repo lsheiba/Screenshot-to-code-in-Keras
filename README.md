@@ -10,7 +10,7 @@ The field took off last year when Tony Beltramelli introduced the [pix2code pape
 
 Currently, the largest barrier to automating front-end development is computing power. However, we can use current deep learning algorithms, along with synthesized training data, to start exploring artificial front-end automation right now.
 
-In the provided models, we’ll teach a neural network how to code a basic a HTML and CSS website based on a picture of a design mockup.
+In the provided models, we’ll teach a neural network how to code a basic HTML and CSS website based on a picture of a design mockup.
 
 We’ll build the neural network in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
@@ -37,9 +37,9 @@ FloydHub is hands down the best option to run models on cloud GPUs: [floydhub.co
 pip install floyd-cli
 floyd login
 git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
-cd Screenshot-to-code-in-Keras
+cd Screenshot-to-code-in-Keras/floydhub 
 floyd init projectname
-floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/1:data --mode jupyter
+floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/2:data --data emilwallner/datasets/html_models/1:weights --mode jupyter
 ```
 ### Local
 ``` bash
@@ -100,5 +100,5 @@ The final version, the Bootstrap version, is prepared with a small set to test r
 - [HTML](https://www.floydhub.com/emilwallner/datasets/html_models)
 
 ## Acknowledgments
-- The code is largly influenced by Tony Beltramelli's pix2code paper. [Code](https://github.com/tonybeltramelli/pix2code) [Paper](https://arxiv.org/abs/1705.07962)
+- The code is largely influenced by Tony Beltramelli's pix2code paper. [Code](https://github.com/tonybeltramelli/pix2code) [Paper](https://arxiv.org/abs/1705.07962)
 - The structure and some of the functions are from Jason Brownlee's [excellent tutorial](https://machinelearningmastery.com/develop-a-caption-generation-model-in-keras/)
